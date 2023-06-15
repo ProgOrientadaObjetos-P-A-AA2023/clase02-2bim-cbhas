@@ -9,61 +9,60 @@ package paquete9;
  *
  * @author reroes
  */
-public class EstudiantePresencial extends Estudiante{
-    
+public class EstudiantePresencial extends Estudiante {
+
     int numeroCreditos;
     double costoCredito;
     double matriculaPresencial;
-    
-    public EstudiantePresencial(String n, String a, String iden, int ed){
+
+    public EstudiantePresencial(String n, String a, String iden, int ed) {
         super(n, a, iden, ed);
     }
-    
-    public EstudiantePresencial(String n, String a, String iden, int ed, 
-            double costo, int creditos){
+
+    public EstudiantePresencial(String n, String a, String iden, int ed,
+            double costo, int creditos) {
         super(iden, ed);
         establecerNombresEstudiante(n);
         apellidosEstudiante = a.toLowerCase();
         costoCredito = costo;
         numeroCreditos = creditos;
     }
-    
+
     //  Métodos establecer y calcular para los datos o atributos de la clase
     // 2.  Método establecerNumeroCreditos(numero: Real)
-    public void establecerNumeroCreditos(int numero){
+    public void establecerNumeroCreditos(int numero) {
         numeroCreditos = numero;
     }
-    
+
     // 3.  Método establecerCostoCredito(valor: Real)
-    public void establecerCostoCredito(double valor){
+    public void establecerCostoCredito(double valor) {
         costoCredito = valor;
     }
 
     // 4.  Método calcularMatriculaPresencial()
-    public void calcularMatriculaPresencial(){
+    public void calcularMatriculaPresencial() {
         matriculaPresencial = numeroCreditos * costoCredito;
     }
 
     //  Métodos obtener para los datos o atributos de la clase
     // 5. Método obtenerNumeroCreditos() : Entero
-    public int obtenerNumeroCreditos(){
-        return numeroCreditos; 
+    public int obtenerNumeroCreditos() {
+        return numeroCreditos;
     }
 
     // 6. Método obtenerCostoCredito() : Real
-    public double obtenerCostoCredito(){
+    public double obtenerCostoCredito() {
         return costoCredito;
     }
 
     // 7. Método obtenerMatriculaPresencial() : Real
-    public double obtenerMatriculaPresencial(){
+    public double obtenerMatriculaPresencial() {
         return matriculaPresencial;
     }
-    
-    
+
     @Override
-    public String toString(){
-        
+    public String toString() {
+
         String cadenaFinal = String.format("Nombre: %s\n"
                 + "Apellido: %s\n"
                 + "Identificación: %s\n"
@@ -78,7 +77,7 @@ public class EstudiantePresencial extends Estudiante{
                 obtenerCostoCredito(),
                 obtenerNumeroCreditos(),
                 obtenerMatriculaPresencial());
-        
+
         return cadenaFinal;
     }
 }

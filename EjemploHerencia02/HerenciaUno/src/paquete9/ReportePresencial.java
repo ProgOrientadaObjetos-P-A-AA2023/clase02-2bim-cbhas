@@ -11,46 +11,46 @@ import java.util.ArrayList;
  *
  * @author reroes
  */
-public class ReportePresencial extends Reporte{
-    
+public class ReportePresencial extends Reporte {
+
     private ArrayList<EstudiantePresencial> lista;
     private double totalMatriculaPresencial;
     private double matriculaMenorCosto;
     private double matriculaMayorCosto;
-    
-    public ReportePresencial(String nombre, String carrera, String ciclo){
+
+    public ReportePresencial(String nombre, String carrera, String ciclo) {
         super(nombre, carrera, ciclo);
-        
+
     }
-    
-    public void establecerLista(ArrayList<EstudiantePresencial> listado){
+
+    public void establecerLista(ArrayList<EstudiantePresencial> listado) {
         lista = listado;
     }
-    
-    public void establecerTotalMatriculasDistancia(){
-        
+
+    public void establecerTotalMatriculasDistancia() {
+
     }
-    
-    public ArrayList<EstudiantePresencial> obtenerLista(){
+
+    public ArrayList<EstudiantePresencial> obtenerLista() {
         return lista;
     }
-    
-    public double obtenerTotalMatriculaPresencial(){
+
+    public double obtenerTotalMatriculaPresencial() {
         return totalMatriculaPresencial;
     }
-    
+
     @Override
-    public String toString(){
-        
+    public String toString() {
+
         String cadena = String.format("Carrera: %s \n"
                 + "Ciclo: %s\n"
                 + "%s\n"
-                + "El total de matriculas es: %.2f\n", 
+                + "El total de matriculas es: %.2f\n",
                 carrera,
                 ciclo,
                 obtenerLista(),
                 obtenerTotalMatriculaPresencial());
         return cadena;
     }
-    
+
 }
