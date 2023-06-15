@@ -16,13 +16,12 @@ public class Ejecutor1 {
         int edad = 36;
         int numAsignaturas = 5;
         double costoAsig = 50.5;
-        
-                
+
         EstudianteDistancia estDistancia = new EstudianteDistancia(nombre,
                 apellido, identificacion, edad, numAsignaturas, costoAsig);
-        
+
         estDistancia.calcularMatriculaDistancia();
-        
+
         System.out.println(estDistancia);
     }
 }
